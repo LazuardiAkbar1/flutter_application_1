@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Onboarding/onboarding_screen.dart';
-import 'Login/Login.dart';  // Pastikan ini digunakan
+import 'package:flutter_application_1/Onboarding/onboarding_screen.dart';
+import 'package:flutter_application_1/Login/Login.dart';
 
 void main() {
   runApp(MyApp());

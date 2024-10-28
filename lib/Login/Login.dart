@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 const SizedBox(height: 50),
                 Image.asset(
-                  'assets/images/login_image.png', // Ganti dengan gambar ilustrasi login kamu
+                  'assets/images/Login1.png', // Ganti dengan gambar ilustrasi login kamu
                   height: 200,
                 ),
                 const SizedBox(height: 30),
