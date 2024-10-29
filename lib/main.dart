@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Onboarding/onboarding_screen.dart';
 import 'package:flutter_application_1/Login/Login.dart';
+import 'package:flutter_application_1/Register/register.dart';
+import 'package:flutter_application_1/Register/OTPVerification.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +17,10 @@ class MyApp extends StatelessWidget {
       title: 'Komplekita',
       home: SplashScreen(),
       routes: {
-        '/Login/Login': (context) => LoginScreen(), // Tambahkan rute login di sini
+        '/Login/Login': (context) =>
+            LoginScreen(), // Tambahkan rute login di sini
+        '/Register/register': (context) => RegisterScreen(),
+        '/Register/OTPVerification': (context) => OTPVerificationScreen(),
       },
     );
   }

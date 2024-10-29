@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Register/register.dart'; // Import RegisterScreen here
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -177,7 +178,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Text('Don\'t have an account? '),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/register');
+                        Navigator.pushNamed(context,
+                            '/Register/register'); // Navigate to register
                       },
                       child: const Text(
                         'Register',
