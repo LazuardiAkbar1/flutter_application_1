@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Login/Login.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -21,6 +22,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         actions: [
           TextButton(
             onPressed: () {
+              print("Skip Button Pressed");
               // Navigasi ke halaman login jika tombol Skip ditekan
               Navigator.pushReplacementNamed(context, '/Login/Login');
             },

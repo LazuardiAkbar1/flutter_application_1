@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.left,
                 ),
                 const SizedBox(height: 10),
                 const Text(
