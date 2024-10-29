@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 16,
                     color: Colors.grey,
                   ),
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.left,
                 ),
                 const SizedBox(height: 30),
                 TextFormField(
@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.visibility_off),
                       onPressed: () {
-                        // Add functionality to show/hide password
+                        // Tambahkan fungsionalitas untuk menampilkan/menyembunyikan password
                       },
                     ),
                     border: OutlineInputBorder(
@@ -106,28 +106,36 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      // Process login
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            // Alihkan ke halaman dashboard
+                            Navigator.pushNamed(context, '/dashboard');
+                          }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          minimumSize: const Size(double.infinity, 50),
+                          backgroundColor: Colors.blue,
+                        ),
+                        child: const Text(
+                          'Login',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
                     ),
-                    minimumSize: const Size(double.infinity, 50),
-                    backgroundColor: Colors.blue,
-                  ),
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                const Icon(
-                  Icons.fingerprint,
-                  size: 40,
+                    const SizedBox(width: 10), // Jarak antara tombol dan ikon
+                    const Icon(
+                      Icons.fingerprint,
+                      size: 40,
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 10),
                 const Text(
@@ -140,24 +148,24 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     IconButton(
-                      icon: Image.asset('assets/icons/google.png'),
+                      icon: Image.asset('assets/icons/Google.png'),
                       iconSize: 40,
                       onPressed: () {
-                        // Add Google login functionality
+                        // Tambahkan fungsionalitas login Google
                       },
                     ),
                     IconButton(
-                      icon: Image.asset('assets/icons/apple.png'),
+                      icon: Image.asset('assets/icons/Apple.png'),
                       iconSize: 40,
                       onPressed: () {
-                        // Add Apple login functionality
+                        // Tambahkan fungsionalitas login Apple
                       },
                     ),
                     IconButton(
-                      icon: Image.asset('assets/icons/facebook.png'),
+                      icon: Image.asset('assets/icons/Facebook.png'),
                       iconSize: 40,
                       onPressed: () {
-                        // Add Facebook login functionality
+                        // Tambahkan fungsionalitas login Facebook
                       },
                     ),
                   ],
