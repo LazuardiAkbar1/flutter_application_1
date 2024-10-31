@@ -7,6 +7,7 @@ import 'package:flutter_application_1/Login/ForgetPassword1.dart';
 import 'package:flutter_application_1/Register/register.dart';
 import 'package:flutter_application_1/Register/OTPVerification.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/Login/ForgetPassword1': (context) => ForgetPassword1(),
         '/Register/register': (context) => RegisterScreen(),
         '/Register/OTPVerification': (context) => OTPVerificationScreen(),
+        '/Dashboard/Dashboard': (context) => DashboardScreen(),   
       },
     );
   }
