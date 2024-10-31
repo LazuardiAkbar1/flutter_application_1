@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Onboarding/onboarding_screen.dart';
 import 'package:flutter_application_1/Login/Login.dart';
+import 'package:flutter_application_1/Dashboard/Dashboard.dart';
+import 'package:flutter_application_1/Login/ForgetPassword.dart';
+import 'package:flutter_application_1/Login/ForgetPassword1.dart';
+// import 'package:flutter_application_1/Login/Register.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +19,10 @@ class MyApp extends StatelessWidget {
       title: 'Komplekita',
       home: SplashScreen(),
       routes: {
-        '/Login/Login': (context) => LoginScreen(), // Tambahkan rute login di sini
+        '/Login/Login': (context) => LoginScreen(), 
+        '/Login/ForgetPassword': (context) => ForgetPasswordScreen(), // Tambahkan rute forget password di sini
+        '/Login/ForgetPassword1': (context) => ForgetPassword1(), // Tambahkan rute forget password di sini
+        // '/Login/Register': (context) => RegisterScreen(), // Tambahkan rute Register di sini
       },
     );
   }
@@ -54,6 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 100),
             const SizedBox(height: 20),
             const Text(
               '',
@@ -66,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
             const Text(
               'Version 0.1.23 build 2034.43.3301',
               style: TextStyle(
-                fontSize: 14,
+                 fontSize: 14,
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Login/ForgetPassword.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -27,13 +28,23 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 200,
                 ),
                 const SizedBox(height: 30),
-                const Text(
-                  'Login',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.left,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start, // Align gambar ke kiri
+                  children: [
+                    Image.asset(
+                      'assets/icons/garis1.png', // Tambahkan asset gambar
+                      height: 30, 
+                    ),
+                    const SizedBox(width: 10), // Jarak antara gambar dan teks
+                    const Text(
+                      'Login',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 10),
                 const Text(
@@ -100,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/forgot_password');
+                      Navigator.pushNamed(context, '/Login/ForgetPassword');
                     },
                     child: const Text('Forgot password?'),
                   ),
@@ -114,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                             // Alihkan ke halaman dashboard
-                            Navigator.pushNamed(context, '/dashboard');
+                            Navigator.pushNamed(context, '/Dashboard/Dashboard');
                           }
                         },
                         style: ElevatedButton.styleFrom(
@@ -177,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Text('Don\'t have an account? '),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/register');
+                        Navigator.pushNamed(context, '/Login/Register');
                       },
                       child: const Text(
                         'Register',
