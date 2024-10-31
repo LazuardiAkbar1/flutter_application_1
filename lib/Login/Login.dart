@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Login/ForgetPassword.dart';
+import 'package:flutter_application_1/Login/ForgetPassword.dart'; // Atau, jika Anda memilih register.dart
+// import 'package:flutter_application_1/Register/register.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -29,13 +30,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 30),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start, // Align gambar ke kiri
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Image.asset(
-                      'assets/icons/garis1.png', // Tambahkan asset gambar
-                      height: 30, 
+                      'assets/icons/garis1.png',
+                      height: 30,
                     ),
-                    const SizedBox(width: 10), // Jarak antara gambar dan teks
+                    const SizedBox(width: 10),
                     const Text(
                       'Login',
                       style: TextStyle(
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscureText: true,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter your password';
+ return 'Please enter your password';
                     }
                     if (value.length < 6) {
                       return 'Password must be at least 6 characters';
@@ -141,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 10), // Jarak antara tombol dan ikon
+                    const SizedBox(width: 10),
                     const Icon(
                       Icons.fingerprint,
                       size: 40,
@@ -188,7 +189,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Text('Don\'t have an account? '),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/Login/Register');
+                        Navigator.pushNamed(context, '/Register/register');
                       },
                       child: const Text(
                         'Register',

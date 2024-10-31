@@ -4,7 +4,8 @@ import 'package:flutter_application_1/Login/Login.dart';
 import 'package:flutter_application_1/Dashboard/Dashboard.dart';
 import 'package:flutter_application_1/Login/ForgetPassword.dart';
 import 'package:flutter_application_1/Login/ForgetPassword1.dart';
-// import 'package:flutter_application_1/Login/Register.dart';
+import 'package:flutter_application_1/Register/register.dart';
+import 'package:flutter_application_1/Register/OTPVerification.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,10 +20,11 @@ class MyApp extends StatelessWidget {
       title: 'Komplekita',
       home: SplashScreen(),
       routes: {
-        '/Login/Login': (context) => LoginScreen(), 
-        '/Login/ForgetPassword': (context) => ForgetPasswordScreen(), // Tambahkan rute forget password di sini
-        '/Login/ForgetPassword1': (context) => ForgetPassword1(), // Tambahkan rute forget password di sini
-        // '/Login/Register': (context) => RegisterScreen(), // Tambahkan rute Register di sini
+        '/Login/Login': (context) => LoginScreen(),
+        '/Login/ForgetPassword': (context) => ForgetPasswordScreen(),
+        '/Login/ForgetPassword1': (context) => ForgetPassword1(),
+        '/Register/register': (context) => RegisterScreen(),
+        '/Register/OTPVerification': (context) => OTPVerificationScreen(),
       },
     );
   }
@@ -55,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Image.asset('assets/images/komplekita_logo.png'),
             const SizedBox(height: 20),
             const Text(
-              '',
+              'Welcome to Komplekita',
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
@@ -64,7 +66,7 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(height: 100),
             const SizedBox(height: 20),
             const Text(
-              '',
+              'Your app description here',
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -74,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen> {
             const Text(
               'Version 0.1.23 build 2034.43.3301',
               style: TextStyle(
-                 fontSize: 14,
+                fontSize: 14,
               ),
             ),
           ],
